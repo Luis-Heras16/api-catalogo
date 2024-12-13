@@ -1,7 +1,7 @@
 import empresasDAO from "../daos/empresas.daos.js";
 const empresasController ={};
 empresasController.insertEmpresa = async (req, res) =>{
-    empresasDAO.insert(req.body)
+    empresasDAO.insertEmpresa(req.body)
     .then((empresa)=>{
         res.json({
             message:"Student created succesfully"
@@ -14,7 +14,7 @@ empresasController.insertEmpresa = async (req, res) =>{
     });
 };
 empresasController.getAllEmpresa = async (req, res) => {
-    empresasDAO.getAllEmpresa()
+    empresasDAO.getAllEmpresas()
     .then((empresa) =>{
         res.json(empresa);
     })
